@@ -12,7 +12,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title  -->
-    <title>Amado - Furniture Ecommerce Template | Home</title>
+    <title>WeWeb | Home</title>
 
     <!-- Favicon  -->
     <link rel="icon" href="${pageContext.request.contextPath}/resources/img/core-img/favicon.ico">
@@ -50,7 +50,7 @@
         <div class="mobile-nav">
             <!-- Navbar Brand -->
             <div class="amado-navbar-brand">
-                <a href="index.jsp"><img src="${pageContext.request.contextPath}/resources/img/core-img/logo.png" alt=""></a>
+                <a href="home.jsp"><img src="${pageContext.request.contextPath}/resources/img/core-img/logo.png" alt=""></a>
             </div>
             <!-- Navbar Toggler -->
             <div class="amado-navbar-toggler">
@@ -66,7 +66,7 @@
             </div>
             <!-- Logo -->
             <div class="logo">
-                <a href="index.jsp"><img src="${pageContext.request.contextPath}/resources/img/core-img/logo.png" alt=""></a>
+                <a href="home.jsp"><img src="${pageContext.request.contextPath}/resources/img/core-img/logo.png" alt=""></a>
             </div>
             <!-- Amado Nav -->
             <nav class="amado-nav">
@@ -85,7 +85,9 @@
             </div>
             <!-- Cart Menu -->
             <div class="cart-fav-search mb-100">
-                <a href="cart.html" class="cart-nav"><img src="${pageContext.request.contextPath}/resources/img/core-img/cart.png" alt=""> Cart <span>(0)</span></a>
+				<!-- <a href="javascript:void(0)" onclick="loginSignup();" class="member-nav"><img src="${pageContext.request.contextPath}/resources/img/core-img/member.png" alt=""> Login</a>-->            
+            	<a href="loginSignup" class="member-nav"><img src="${pageContext.request.contextPath}/resources/img/core-img/member.png" alt=""> Login</a>
+                <a href="cart.jsp" class="cart-nav"><img src="${pageContext.request.contextPath}/resources/img/core-img/cart.png" alt=""> Cart <span>(0)</span></a>
                 <a href="#" class="fav-nav"><img src="${pageContext.request.contextPath}/resources/img/core-img/favorites.png" alt=""> Favourite</a>
                 <a href="#" class="search-nav"><img src="${pageContext.request.contextPath}/resources/img/core-img/search.png" alt=""> Search</a>
             </div>
@@ -96,4 +98,13 @@
                 <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                 <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
             </div>
+       
         </header>
+<!-- loginSignup.html script 
+<script type=text/javascript>
+	function loginSignup(){
+		$(login).modal('show')
+	}
+</script> -->
+<!-- modal -->
+<%-- <%@include file="../loginSignup.html"%>--%>      
