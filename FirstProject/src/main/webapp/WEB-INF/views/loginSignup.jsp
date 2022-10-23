@@ -35,7 +35,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- TERMS -->
+                    <!-- TERMS 회원 정책 
                     <div class="terms">
                         <h2>dp Terms of Service</h2>
                         <p class="small">Last modified: September 23, 2017</p>
@@ -70,7 +70,7 @@
                         <p>If you do not comply with these terms, and we donât take action right away, this doesnât mean that we are giving up any rights that we may have (such as taking action in the future).</p>
                         <p>The laws of California, U.S.A., excluding Californiaâs conflict of laws rules, will apply to any disputes arising out of or relating to these terms or the Services. All claims arising out of or relating to these terms or the Services will be litigated exclusively in the federal or state courts of Santa Clara County, California, USA, and you and dp consent to personal jurisdiction in those courts.</p>
                         <p>For information about how to contact dp, please visit our contact page.</p>
-                    </div>
+                    </div> -->
 
                     <!-- RECOVERY -->
                     <div class="recovery">
@@ -102,22 +102,25 @@
                     				<label for="remember_me">Remember me</label>
                     				<input type="submit" class="button" value="Login">
                     			</form>
+                    			<!-- 비밀번호 찾기 기능
                     			<div class="help-action">
                     				<p><i class="fa fa-arrow-left" aria-hidden="true"></i><a class="forgot" href="#">Forgot your password?</a></p>
-                    			</div>
+                    			</div> -->
                     		</div>
                             <!-- TABS CONTENT SIGNUP -->
                     		<div id="signup-tab-content">
                     			<form class="signup-form" action="" method="post">
                     				<input type="email" class="input" id="user_email" autocomplete="off" placeholder="Email">
                     				<input type="text" class="input" id="user_name" autocomplete="off" placeholder="Username">
-                    				<input type="password" class="input" id="user_pass" autocomplete="off" placeholder="Password">
+                    				<input type="password" class="input" id="user_pw" autocomplete="off" placeholder="Password">
                     				<input type="submit" class="button" value="Sign Up">
                     			</form>
-                    			<div class="help-action">
+                    			
+                    			<!-- <div class="help-action">
                     				<p>By signing up, you agree to our</p>
                     				<p><i class="fa fa-arrow-left" aria-hidden="true"></i><a class="agree" href="#">Terms of service</a></p>
-                    			</div>
+                    			</div> -->
+                    			
                     		</div>
                     	</div>
                 	</div>

@@ -11,9 +11,4 @@ public class HomeController {
 		return "home";
 	}
 	
-	@RequestMapping("loginSignup")
-	public String login() {
-		return "loginSignup";
-	}
-	
 }
