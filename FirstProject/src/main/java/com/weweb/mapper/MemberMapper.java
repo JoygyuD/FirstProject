@@ -4,5 +4,5 @@ import com.weweb.command.MemberVO;
 
 public interface MemberMapper {
 	
-	public int signUp(MemberVO vo);	// 회원가입 메서드
+	public int signUp(MemberVO vo);	// 회원가입
 }

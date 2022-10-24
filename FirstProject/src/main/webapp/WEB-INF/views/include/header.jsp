@@ -50,7 +50,7 @@
         <div class="mobile-nav">
             <!-- Navbar Brand -->
             <div class="amado-navbar-brand">
-                <a href="home.jsp"><img src="${pageContext.request.contextPath}/resources/img/core-img/logo.png" alt=""></a>
+                <a href="home"><img src="${pageContext.request.contextPath}/resources/img/core-img/logo.png" alt=""></a>
             </div>
             <!-- Navbar Toggler -->
             <div class="amado-navbar-toggler">
@@ -66,7 +66,7 @@
             </div>
             <!-- Logo -->
             <div class="logo">
-                <a href="home.jsp"><img src="${pageContext.request.contextPath}/resources/img/core-img/logo.png" alt=""></a>
+                <a href="home"><img src="${pageContext.request.contextPath}/resources/img/core-img/logo.png" alt=""></a>
             </div>
             <!-- Amado Nav -->
             <nav class="amado-nav">
@@ -86,7 +86,7 @@
             <!-- Cart Menu -->
             <div class="cart-fav-search mb-100">
 				<!-- <a href="javascript:void(0)" onclick="loginSignup();" class="member-nav"><img src="${pageContext.request.contextPath}/resources/img/core-img/member.png" alt=""> Login</a>-->            
-            	<a href="loginSignup" class="member-nav"><img src="${pageContext.request.contextPath}/resources/img/core-img/member.png" alt=""> Login</a>
+            	<a href="member/loginSignup" class="member-nav"><img src="${pageContext.request.contextPath}/resources/img/core-img/member.png" alt=""> Login</a>
                 <a href="cart.jsp" class="cart-nav"><img src="${pageContext.request.contextPath}/resources/img/core-img/cart.png" alt=""> Cart <span>(0)</span></a>
                 <a href="#" class="fav-nav"><img src="${pageContext.request.contextPath}/resources/img/core-img/favorites.png" alt=""> Favourite</a>
                 <a href="#" class="search-nav"><img src="${pageContext.request.contextPath}/resources/img/core-img/search.png" alt=""> Search</a>

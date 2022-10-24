@@ -10,6 +10,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @EnableWebMvc
 @ComponentScan(basePackages = {"com.weweb.controller"})
+@ComponentScan(basePackages = {"com.weweb.service"})
 public class ServletConfig implements WebMvcConfigurer{
 	
 	@Override
