@@ -7,6 +7,8 @@
 	<insert id="signUp" parameterType="com.weweb.command.MemberVO">
 		insert into tb_member (email, pw, name) values(#{email},#{pw},#{name})
 	</insert>
-	
+<select id="login" resultType="com.weweb.command.MemberVO" parameterType="com.weweb.command.MemberVO">
+		select * from tb_member where id = #{id} and pw= #{pw}
+	</select> 
 	
 </mapper>

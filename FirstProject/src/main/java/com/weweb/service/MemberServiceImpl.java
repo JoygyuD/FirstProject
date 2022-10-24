@@ -20,5 +20,12 @@ public class MemberServiceImpl implements MemberService{
 		int result = mapper.signUp(vo);
 		return result;
 	}
+	// 로그인
+	@Override
+	public int login(MemberVO vo) {
+		System.out.println("Login = > 동작Service");
+		int result = mapper.login(vo);
+		return result;
+	}
 
 }

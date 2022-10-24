@@ -31,4 +31,11 @@ public class MemberController {
 		
 		return "redirect: home";
 	}
+	@RequestMapping("Login")
+	public String Login(MemberVO vo, RedirectAttributes RA) {
+		System.out.println("Login => 동작");
+		int result = service.login(vo);
+		
+		return "redirect : home";
+	}
 }

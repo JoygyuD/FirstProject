@@ -21,14 +21,14 @@ public class RootConfig {
 		HikariConfig hikariConfig = new HikariConfig(); // hikari 객체 생성
 		
 		// 임시로 해놓은 것 수정 필요
-		hikariConfig.setDriverClassName("org.mariadb.jdbc.Driver");// MariaDB
-		hikariConfig.setJdbcUrl("jdbc:mariadb://localhost:3306/wewebdb");// MariaDB
+//		hikariConfig.setDriverClassName("org.mariadb.jdbc.Driver");// MariaDB
+//		hikariConfig.setJdbcUrl("jdbc:mariadb://localhost:3306/wewebdb");// MariaDB
 		
-//		hikariConfig.setDriverClassName("oracle.jdbc.OracleDriver");// oracleDB
-//		hikariConfig.setJdbcUrl("jdbc:oracle:thin:@localhost:1521/XEPDB1");// oracleDB
+		hikariConfig.setDriverClassName("oracle.jdbc.OracleDriver");// oracleDB
+		hikariConfig.setJdbcUrl("jdbc:oracle:thin:@localhost:1521/XEPDB1");// oracleDB
 		
-		hikariConfig.setUsername("wewebmaster");
-		hikariConfig.setPassword("wewebmaster");
+		hikariConfig.setUsername("system");
+		hikariConfig.setPassword("system");
 		
 		HikariDataSource dataSource = new HikariDataSource(hikariConfig);
 		
