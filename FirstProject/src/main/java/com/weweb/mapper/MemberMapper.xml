@@ -5,7 +5,7 @@
 	
 <mapper namespace="com.weweb.mapper.MemberMapper">
 	<insert id="signUp" parameterType="com.weweb.command.MemberVO">
-		insert into tb_member (email, pw, name) values(#{email},#{pw},#{name})
+		insert into tb_member (email, password, name) values(#{email},#{password},#{name})
 	</insert>
 	
 	

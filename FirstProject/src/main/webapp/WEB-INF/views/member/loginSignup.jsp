@@ -109,10 +109,10 @@
                     		</div>
                             <!-- TABS CONTENT SIGNUP -->
                     		<div id="signup-tab-content">
-                    			<form class="signup-form" action="member/signUp" method="post">
+                    			<form class="signup-form" action="signUp" method="post">
                     				<input type="email" class="input" name="email" id="user_email" autocomplete="off" placeholder="Email">
                     				<input type="text" class="input" name="name" id="user_name" autocomplete="off" placeholder="Username">
-                    				<input type="password" class="input" name="pw" id="user_pw" autocomplete="off" placeholder="Password">
+                    				<input type="password" class="input" name="password" id="user_pw" autocomplete="off" placeholder="Password">
                     				<input type="submit" class="button" value="Sign Up">
                     			</form>
                     			

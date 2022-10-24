@@ -83,7 +83,7 @@ $(function() {
 });
 
 // DISPLAY MSSG
-$(function() {
+/*$(function() {
 	$('.recovery .button').on('click', function(event) {
 		event.preventDefault();
 		$('.recovery .mssg').addClass('animate');
@@ -95,7 +95,7 @@ $(function() {
 			$('.recovery .mssg').removeClass('animate');
 		}, 2500);
 	});
-});
+});*/
 
 /*// DISABLE SUBMIT FOR DEMO
 $(function() {
