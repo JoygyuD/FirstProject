@@ -66,30 +66,39 @@
             </div>
             <!-- Logo -->
             <div class="logo">
-                <a href="home"><img src="${pageContext.request.contextPath}/resources/img/core-img/logo.png" alt=""></a>
+                <a href="${pageContext.request.contextPath}"><img src="${pageContext.request.contextPath}/resources/img/core-img/logo.png" alt=""></a>
             </div>
             <!-- Amado Nav -->
             <nav class="amado-nav">
                 <ul>
-                    <li class="active"><a href="index.jsp">Home</a></li>
+                    <li class="active"><a href="${pageContext.request.contextPath}">Home</a></li>
                     <li><a href="shop.jsp">Shop</a></li>
                     <li><a href="product-details.jsp">Product</a></li>
                     <li><a href="cart.jsp">Cart</a></li>
                     <li><a href="checkout.jsp">Checkout</a></li>
                 </ul>
             </nav>
-            <!-- Button Group -->
+            <!-- Button Group
             <div class="amado-btn-group mt-30 mb-100">
                 <a href="#" class="btn amado-btn mb-15">%Discount%</a>
                 <a href="#" class="btn amado-btn active">New this week</a>
-            </div>
+            </div> -->
             <!-- Cart Menu -->
             <div class="cart-fav-search mb-100">
 				<!-- <a href="javascript:void(0)" onclick="loginSignup();" class="member-nav"><img src="${pageContext.request.contextPath}/resources/img/core-img/member.png" alt=""> Login</a>-->            
-            	<a href="member/loginSignup" class="member-nav"><img src="${pageContext.request.contextPath}/resources/img/core-img/member.png" alt=""> Login</a>
-                <a href="cart.jsp" class="cart-nav"><img src="${pageContext.request.contextPath}/resources/img/core-img/cart.png" alt=""> Cart <span>(0)</span></a>
-                <a href="#" class="fav-nav"><img src="${pageContext.request.contextPath}/resources/img/core-img/favorites.png" alt=""> Favourite</a>
                 <a href="#" class="search-nav"><img src="${pageContext.request.contextPath}/resources/img/core-img/search.png" alt=""> Search</a>
+	            <c:choose>
+	         	 	<c:when test="${sessionScope.user_email != null }">
+			            <a class="collapse-item" href="${pageContext.request.contextPath}/member/mypage"><img src="${pageContext.request.contextPath}/resources/img/core-img/member.png" alt="">MyPage</a>
+		            	<a class="collapse-item" href="${pageContext.request.contextPath}/member/logout"><img src="${pageContext.request.contextPath}/resources/img/core-img/logout.png" alt="">Logout</a>
+		            	<a class="cart-nav" href="cart.jsp"><img src="${pageContext.request.contextPath}/resources/img/core-img/cart.png" alt=""> Cart <span>(0)</span></a>
+	               		<a class="fav-nav" href="#"><img src="${pageContext.request.contextPath}/resources/img/core-img/favorites.png" alt=""> Favourite</a>
+		            </c:when>
+		            
+		            <c:otherwise>
+		            	<a href="member/loginSignup" class="member-nav"><img src="${pageContext.request.contextPath}/resources/img/core-img/member.png" alt=""> SignUp &amp; Login</a>
+		            </c:otherwise>
+	            </c:choose>
             </div>
             <!-- Social Button -->
             <div class="social-info d-flex justify-content-between">
@@ -98,7 +107,7 @@
                 <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                 <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
             </div>
-       
+        
         </header>
 <!-- loginSignup.html script 
 <script type=text/javascript>
