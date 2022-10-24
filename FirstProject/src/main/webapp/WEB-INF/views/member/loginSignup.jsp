@@ -95,9 +95,9 @@
                     	<div class="tabs-content">
                             <!-- TABS CONTENT LOGIN -->
                     		<div id="login-tab-content" class="active">
-                    			<form class="login-form" action="" method="post">
-                    				<input type="text" class="input" id="user_login" autocomplete="off" placeholder="Email or Username">
-                    				<input type="password" class="input" id="user_pass" autocomplete="off" placeholder="Password">
+                    			<form class="login-form" action="Login" method="post">
+                    				<input type="text" class="input" name="email" id="user_login" autocomplete="off" placeholder="Email">
+                    				<input type="password" class="input" name="password" id="user_pass" autocomplete="off" placeholder="Password">
                     				<input type="checkbox" class="checkbox" checked id="remember_me">
                     				<label for="remember_me">Remember me</label>
                     				<input type="submit" class="button" value="Login">

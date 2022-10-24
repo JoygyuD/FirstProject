@@ -1,5 +1,7 @@
 package com.weweb.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
@@ -20,15 +22,29 @@ public class MemberController {
 	
 	@RequestMapping("loginSignup")
 	public String loginSignupPage() {
-		System.out.println("MemberController => loginSignupPage() 동작");
+		System.out.println("MemberController => loginSignupPage()");
 		return "member/loginSignup";
 	}
 	
 	@RequestMapping("signUp")
 	public String signUp(MemberVO vo, RedirectAttributes RA) {
-		System.out.println("MemberController => signUp() 동작");
+		System.out.println("MemberController => signUp()");
 		int result = service.signUp(vo);
 		
 		return "/";
+	}
+	@RequestMapping("Login")
+	public String Login(MemberVO vo, RedirectAttributes RA, HttpSession session) {
+		System.out.println("MemberController => Login()");
+		MemberVO loginVO = service.login(vo);
+		
+		if(loginVO == null) {
+			RA.addFlashAttribute("msg", "아이디 또는 패스워드를 잘못입력하셨습니다.");
+			return "redirect:/member/loginSignup";
+		}else {
+			session.setAttribute("user_id", loginVO.getEmail());
+			session.setAttribute("user_name", loginVO.getName());
+		}
+		return "redirect:/";
 	}
 }

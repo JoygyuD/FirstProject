@@ -8,5 +8,10 @@
 		insert into tb_member (email, password, name) values(#{email},#{password},#{name})
 	</insert>
 	
+	<select id="login" resultType="com.weweb.command.MemberVO" parameterType="com.weweb.command.MemberVO">
+		select * from tb_member where email = #{email} and password= #{password}
+	</select>
+	
+	 
 	
 </mapper>

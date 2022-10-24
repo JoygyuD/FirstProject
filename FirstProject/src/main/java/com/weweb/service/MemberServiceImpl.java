@@ -16,9 +16,16 @@ public class MemberServiceImpl implements MemberService{
 	// 회원가입
 	@Override
 	public int signUp(MemberVO vo) {
-		System.out.println("MemberServiceImpl => signUp() 동작");
+		System.out.println("MemberServiceImpl => signUp()");
 		int result = mapper.signUp(vo);
 		return result;
+	}
+	// 로그인
+	@Override
+	public MemberVO login(MemberVO vo) {
+		System.out.println("MemberServiceImpl => login()");
+		MemberVO loginVO = mapper.login(vo);
+		return loginVO;
 	}
 
 }
