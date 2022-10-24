@@ -29,6 +29,6 @@ public class MemberController {
 		System.out.println("MemberController => signUp() 동작");
 		int result = service.signUp(vo);
 		
-		return "home";
+		return "/";
 	}
 }
