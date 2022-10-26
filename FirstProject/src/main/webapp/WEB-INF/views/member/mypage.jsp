@@ -1,5 +1,5 @@
 <%@include file="../include/header.jsp" %>
-<<style>
+<style>
 	.td{
 		text-align: right;
 	}
@@ -28,6 +28,11 @@
 	                       			<th>phone</th>
 	                       			<td>010-1111-1111</td>
 	                       		</tr>
+	                       		<tr>
+	                       			<th>address</th>
+	                       			<td>서울시 마포구 월드컵로</td>
+	                       		</tr>
+	                       		
 	                       </table>
 	                       
 	                   </div>

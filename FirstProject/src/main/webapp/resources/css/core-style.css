@@ -7,6 +7,7 @@
 @import url(../css/jquery-ui.min.css);
 @import url(../css/nice-select.css);
 @import url(../css/font-awesome.min.css);
+@import url(https://fonts.google.com/specimen/Nanum+Gothic?query=nanum);
 @font-face {
   font-family: 'helveticaneuebold';
   src: url("../fonts/helvetica_neu_bold-webfont.woff2") format("woff2"), url("../fonts/helvetica_neu_bold-webfont.woff") format("woff");
@@ -17,13 +18,17 @@
   src: url("../fonts/helveticaneue_medium-webfont.woff2") format("woff2"), url("../fonts/helveticaneue_medium-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
-@font-face{
-	font-family: 'NanumGothic';
-	src: url("../fonts/NanumGothic.otf") format("otf"), url("../fonts/NanumGothic.ttf") format("ttf");
-	font-weight: normal;
-	font-style: normal;
-	unicode-range: U+AC00-D7A3;
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.eot);
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.woff2) format('woff2'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.woff) format('woff'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.ttf) format('truetype');
 }
+
 /* :: 2.0 Import All CSS */
 /* :: 3.0 Base CSS */
 * {
@@ -31,7 +36,7 @@
   padding: 0; }
 
 body {
-  font-family: "helveticaneuemedium", "NanumGothic";
+  font-family: "NanumGothic", "helveticaneuemedium";
   font-size: 16px; }
 
 h1,
