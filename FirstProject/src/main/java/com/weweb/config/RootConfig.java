@@ -27,8 +27,8 @@ public class RootConfig {
 		hikariConfig.setDriverClassName("oracle.jdbc.OracleDriver");// oracleDB
 		hikariConfig.setJdbcUrl("jdbc:oracle:thin:@localhost:1521/XEPDB1");// oracleDB
 		
-		hikariConfig.setUsername("system");
-		hikariConfig.setPassword("system");
+		hikariConfig.setUsername("spring");
+		hikariConfig.setPassword("spring1");
 		
 		HikariDataSource dataSource = new HikariDataSource(hikariConfig);
 		
