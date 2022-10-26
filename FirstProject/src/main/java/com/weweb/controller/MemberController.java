@@ -33,6 +33,7 @@ public class MemberController {
 		
 		return "/";
 	}
+	
 	@RequestMapping("Login")
 	public String Login(MemberVO vo, RedirectAttributes RA, HttpSession session) {
 		System.out.println("MemberController => Login()");
@@ -42,9 +43,21 @@ public class MemberController {
 			RA.addFlashAttribute("msg", "아이디 또는 패스워드를 잘못입력하셨습니다.");
 			return "redirect:/member/loginSignup";
 		}else {
-			session.setAttribute("user_id", loginVO.getEmail());
+			session.setAttribute("user_email", loginVO.getEmail());
 			session.setAttribute("user_name", loginVO.getName());
 		}
 		return "redirect:/";
+	}
+	
+	@RequestMapping("logout")
+	public String logout(HttpSession session) {
+		System.out.println("MemberController => logout()");
+		session.invalidate();
+		return "redirect:/";
+	}
+	
+	@RequestMapping("mypage")
+	public String mypage() {
+		return "member/mypage";
 	}
 }
