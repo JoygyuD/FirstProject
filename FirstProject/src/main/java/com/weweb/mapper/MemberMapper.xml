@@ -12,6 +12,10 @@
 		select * from tb_member where email = #{email} and password= #{password}
 	</select>
 	
+	<select id="emailCheck" resultType="int">
+		select count(*) as result 
+		from tb_member where email = #{email}
+	</select>	
 	 
 	
 </mapper>
