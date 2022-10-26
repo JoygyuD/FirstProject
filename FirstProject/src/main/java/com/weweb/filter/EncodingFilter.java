@@ -11,7 +11,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.annotation.WebInitParam;
 
-@WebFilter(value = {"/"}, initParams = @WebInitParam(name = "encoding", value="utf-8"))
+@WebFilter(value = {"/*"}, initParams = @WebInitParam(name = "encoding", value="utf-8"))
 public class EncodingFilter implements Filter {
 
 	@Override

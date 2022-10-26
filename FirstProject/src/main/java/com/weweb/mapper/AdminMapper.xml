@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.weweb.mapper.AdminMapper">
+	<select id="categoryList" resultType="com.weweb.command.CategoryVO">
+		with recursive CTE as (
+			select 
+				cateName, 
+				cateCode, 
+				cateCodeRef, 
+				1 as level
+			from tb_category 
+			where 
+				cateCodeRef = 0 
+			union all 
+			select 
+				c.cateName, 
+				c.cateCode, 
+				c.cateCodeRef, 
+				1 + level as level
+			from tb_category c 
+			inner join CTE on c.cateCodeRef = CTE.cateCode
+		)
+		select
+			cateCode,
+			ifnull(cateCodeRef, 0) as cateCodeRef,
+			cateName,
+			level 
+		from CTE;
+	</select>
+</mapper>

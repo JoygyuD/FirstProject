@@ -31,7 +31,7 @@ public class MemberController {
 		System.out.println("MemberController => signUp()");
 		int result = service.signUp(vo);
 		
-		return "/";
+		return "redirect:/";
 	}
 	
 	@RequestMapping("Login")
@@ -45,6 +45,7 @@ public class MemberController {
 		}else {
 			session.setAttribute("user_email", loginVO.getEmail());
 			session.setAttribute("user_name", loginVO.getName());
+			session.setAttribute("user_grade", loginVO.getGrade());
 		}
 		return "redirect:/";
 	}
@@ -57,7 +58,9 @@ public class MemberController {
 	}
 	
 	@RequestMapping("mypage")
-	public String mypage() {
+	public String mypage(HttpSession session) {
+		session.getAttribute("user_email");
+		
 		return "member/mypage";
 	}
 }

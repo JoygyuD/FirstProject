@@ -1,4 +1,6 @@
-<%@include file="include/header.jsp" %>
+<%@include file="../include/header.jsp" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
         <!-- Product Details Area Start -->
         <div class="single-product-area section-padding-100 clearfix">
             <div class="container-fluid">
@@ -107,4 +109,4 @@
     </div>
     <!-- ##### Main Content Wrapper End ##### -->
 
-<%@include file="include/footer.jsp" %>
+<%@include file="../include/footer.jsp" %>

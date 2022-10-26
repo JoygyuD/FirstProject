@@ -7,7 +7,7 @@
                     <div class="single_widget_area">
                         <!-- Logo -->
                         <div class="footer-logo mr-50">
-                            <a href="index.jsp"><img src="${pageContext.request.contextPath}/resources/img/core-img/logo2.png" alt=""></a>
+                            <a href="${pageContext.request.contextPath}"><img src="${pageContext.request.contextPath}/resources/img/core-img/logo2.png" alt=""></a>
                         </div>
                         <!-- Copywrite Text -->
                         <p class="copywrite"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -30,19 +30,19 @@
                                 <div class="collapse navbar-collapse" id="footerNavContent">
                                     <ul class="navbar-nav ml-auto">
                                         <li class="nav-item active">
-                                            <a class="nav-link" href="index.jsp">Home</a>
+                                            <a class="nav-link" href="${pageContext.request.contextPath}">Home</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="shop.jsp">Shop</a>
+                                            <a class="nav-link" href="${pageContext.request.contextPath}/resources/board/shop">Shop</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="product-details.jsp">Product</a>
+                                            <a class="nav-link" href="#">Product</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="cart.jsp">Cart</a>
+                                            <a class="nav-link" href="#">Cart</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="checkout.jsp">Checkout</a>
+                                            <a class="nav-link" href="#">Checkout</a>
                                         </li>
                                     </ul>
                                 </div>

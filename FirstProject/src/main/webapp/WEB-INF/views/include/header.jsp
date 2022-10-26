@@ -12,7 +12,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title  -->
-    <title>WeWeb | Home</title>
+    <title>WeWeb</title>
 
     <!-- Favicon  -->
     <link rel="icon" href="${pageContext.request.contextPath}/resources/img/core-img/favicon.ico">
@@ -72,10 +72,7 @@
             <nav class="amado-nav">
                 <ul>
                     <li class="active"><a href="${pageContext.request.contextPath}">Home</a></li>
-                    <li><a href="shop.jsp">Shop</a></li>
-                    <li><a href="product-details.jsp">Product</a></li>
-                    <li><a href="cart.jsp">Cart</a></li>
-                    <li><a href="checkout.jsp">Checkout</a></li>
+                    <li><a href="${pageContext.request.contextPath}/board/shop">Shop</a></li>
                 </ul>
             </nav>
             <!-- Button Group
@@ -96,9 +93,15 @@
 		            </c:when>
 		            
 		            <c:otherwise>
-		            	<a href="member/loginSignup" class="member-nav"><img src="${pageContext.request.contextPath}/resources/img/core-img/member.png" alt=""> SignUp &amp; Login</a>
+		            	<a href="${pageContext.request.contextPath}/member/loginSignup" class="member-nav"><img src="${pageContext.request.contextPath}/resources/img/core-img/member.png" alt=""> SignUp &amp; Login</a>
 		            </c:otherwise>
 	            </c:choose>
+	            
+	            <c:choose>
+	            	<c:when test="${sessionScope.user_grade == 1 }">
+	            		<a class="collapse-item" href="${pageContext.request.contextPath}/admin/adminpage"><img src="${pageContext.request.contextPath}/resources/img/core-img/admin.png" alt="">Admin</a>
+	            	</c:when>
+            	</c:choose>
             </div>
             <!-- Social Button -->
             <div class="social-info d-flex justify-content-between">

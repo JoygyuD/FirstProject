@@ -15,11 +15,12 @@ public class MemberVO {
 	private String password;
 	private String name;
 	private Timestamp regdate;
+	private int grade;
 	
 	@Override
 	public String toString() {
-		String msg = String.format("[Email: %s, PW: %s, NAME: %s, REGDATE: %s", 
-				this.email, this.password, this.name, this.regdate );
+		String msg = String.format("[Email: %s, PW: %s, NAME: %s, REGDATE: %s, GRADE: %S", 
+				this.email, this.password, this.name, this.regdate, this.grade);
 		return msg;
 	}
 }
