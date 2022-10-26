@@ -17,7 +17,7 @@ a {
     text-decoration: none;
 }
 a:hover {
-    color: #fbb710;
+    color: #4FDA8C;
 }
 
 /* BODY */
@@ -51,7 +51,7 @@ a.button {
     font-weight: 700;
     letter-spacing: 0;
     border-radius: 0;
-    border: 1px solid #fbb710;
+    border: 1px solid #2D515C;
     text-decoration: none;
     color: #fff;
     background-color: transparent;
@@ -166,7 +166,7 @@ a.button:hover {
 .user .actions a:last-child {
     color: #fff;
     border-radius: 0 30px 30px 0;
-    background-color: #fbb710;
+    background-color: #28A55F;
     background: -moz-linear-gradient(270deg, rgba(105,221,201,1) 0%, rgba(78,193,182,1) 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(105,221,201,1)), color-stop(100%, rgba(78,193,182,1)));
     background: -webkit-linear-gradient(270deg, rgba(105,221,201,1) 0%, rgba(78,193,182,1) 100%);
@@ -498,7 +498,7 @@ input {
 .form-wrap a {
     color: #ccc;
     padding-bottom: 4px;
-    border-bottom: 1px solid #fbb710;
+    border-bottom: 1px solid #04BEBD;
 }
 .form-wrap a:hover {
     color: #fff;
@@ -615,7 +615,7 @@ input {
     opacity: 0;
     content: '';
     background-color: transparent;
-    border: solid #fbb710;
+    border: solid #04BEBD;
     border-width: 0 0 3px 3px;
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);

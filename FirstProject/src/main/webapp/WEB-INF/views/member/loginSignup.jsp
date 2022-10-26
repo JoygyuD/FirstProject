@@ -95,14 +95,12 @@
                     	<div class="tabs-content">
                             <!-- TABS CONTENT LOGIN -->
                     		<div id="login-tab-content" class="active">
-                    			<form class="login-form" action="Login" method="post">
-                    			
-                    				<input type="text" class="input" name="email" id="user_login" autocomplete="off" placeholder="Email">
-                    				<input type="password" class="input" name="password" id="user_pass" autocomplete="off" placeholder="Password">
+                    			<form class="login-form" action="" method="post">
+                    				<input type="text" class="input" id="user_login" autocomplete="off" placeholder="Email or Username">
+                    				<input type="password" class="input" id="user_pass" autocomplete="off" placeholder="Password">
                     				<input type="checkbox" class="checkbox" checked id="remember_me">
                     				<label for="remember_me">Remember me</label>
                     				<input type="submit" class="button" value="Login">
-                    				
                     			</form>
                     			<!-- 비밀번호 찾기 기능  -->
                     			<div class="help-action">
@@ -113,9 +111,9 @@
                     		<div id="signup-tab-content">
                     			<form class="signup-form" action="signUp" method="post">
                     				<input type="email" class="input" name="email" id="user_email" autocomplete="off" placeholder="Email">
-                    				<input type="button" class="btn btn-primary btn-user btn-block" value="중복체크" onclick="emailCheck()">	
+                    				<input type="button" class="btn btn-primary btn-user btn-block" value="이메일 중복체크" onclick="emailCheck()">
                     				<input type="text" class="input" name="name" id="user_name" autocomplete="off" placeholder="Username">
-                    				<input type="password" class="input" name="password" id="user_pw" autocomplete="off" placeholder="Password">
+                    				<input type="password" class="input" name="pw" id="user_pw" autocomplete="off" placeholder="Password">
                     				<input type="submit" class="button" value="Sign Up">
                     			</form>
                     			
@@ -130,53 +128,46 @@
            </div>
        </div>
 <!-- partial -->
-  	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script  src="${pageContext.request.contextPath}/resources/js/loginSignupscript.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script  src="${pageContext.request.contextPath}/resources/js/loginSignupscript.js"></script>
 	<script type="text/javascript">
-			$(document).ready(function(){
-				var msg = '${msg}';
-				if(msg != ''){
-					alert(msg);
-				}
-			});
+		function emailCheck() {
 			
-			function emailCheck() {
+			var id = $("#email").val(); //id태그 값에 접근
+			var userId = {"email":email};  //전송할 데이터의 key:value설정
+			
+			if(id.length < 1){
+				alert("이메일 작성해주세요.");	
+			}else{  //아이디 중복 체크 
+				//먼저 ajax가 지원하는 JSON(데이터포맷)을 사용하기 위해서 라이브러리가 필요함
+				//json은 {키:값}을 구조로 사용하는 데이터 묶음입니다.
 				
-				var email = $("#email").val(); //id태그 값에 접근
-				var useremail = {"email":email};  //전송할 데이터의 key:value설정
-				
-				if(id.length < 4){
-					alert("아이디는 4글자 이상 입력하세요");	
-				}else{  //아이디 중복 체크 
-					//먼저 ajax가 지원하는 JSON(데이터포맷)을 사용하기 위해서 라이브러리가 필요함
-					//json은 {키:값}을 구조로 사용하는 데이터 묶음입니다.
-					
-					//ajax문법
-					$.ajax({
-						type : "post", 		//요청형식
-						url : "checkemail",	//요청할 주소
-						data : useremail, 		//서버에 전송할 데이터 json형식 {key:value}
-						//datatype : "json", //서버에서 요청후 리턴해 주는 타입
-						error : function(request, error){
-							alert(error + "\n" + request.status)
-						},
-						success : function(result){
-							//ajax통신에 성공했을 때에 호출될 자바스크립트 함수, 결과 여부가
-							//result매개변수로 전달됨.
-							console.log("있음(1)없음(0) 여부 : "+result);
-							
-							if(result == 1){ //중복된 아이디가 존재함
-								alert("이미 존재하는 아이다가 있습니다.");
-							}else{
-								alert("사용가능한 아이디 입니다.");
-								$("#email").attr("readonly",true);
-								//attr(속성, 변경할 값)함수는 태그의 내부속성을 변경하는 함수
-							}
+				//ajax문법
+				$.ajax({
+					type : "post", 		//요청형식
+					url : "checkId",	//요청할 주소
+					data : userId, 		//서버에 전송할 데이터 json형식 {key:value}
+					//datatype : "json", //서버에서 요청후 리턴해 주는 타입
+					error : function(request, error){
+						alert(error + "\n" + request.status)
+					},
+					success : function(result){
+						//ajax통신에 성공했을 때에 호출될 자바스크립트 함수, 결과 여부가
+						//result매개변수로 전달됨.
+						console.log("있음(1)없음(0) 여부 : "+result);
+						
+						if(result == 1){ //중복된 아이디가 존재함
+							alert("이미 존재하는 이메일이 있습니다.");
+						}else{
+							alert("사용가능한 이메일 입니다.");
+							$("#email").attr("readonly",true);
+							//attr(속성, 변경할 값)함수는 태그의 내부속성을 변경하는 함수
 						}
-					});
-				}//else가 끝나는 부분
-				console.log(userId);
-			}
+					}
+				});
+			}//else가 끝나는 부분
+			console.log(userId);
+		}
+
 		</script>
-		
 </body>
 </html>

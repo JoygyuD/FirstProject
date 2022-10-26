@@ -12,14 +12,14 @@ import lombok.NoArgsConstructor;
 public class MemberVO {
 	
 	private String email;
-	private String password;
+	private String pw;
 	private String name;
 	private Timestamp regdate;
 	
 	@Override
 	public String toString() {
 		String msg = String.format("[Email: %s, PW: %s, NAME: %s, REGDATE: %s", 
-				this.email, this.password, this.name, this.regdate );
+				this.email, this.pw, this.name, this.regdate );
 		return msg;
 	}
 }

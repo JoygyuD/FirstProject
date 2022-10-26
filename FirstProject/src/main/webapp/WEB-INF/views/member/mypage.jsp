@@ -1,45 +1,28 @@
-<%@include file="../include/header.jsp" %>
-<style>
-	.td{
-		text-align: right;
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%--
+    	세션 정보를 확인 : url을 통해서 강제 접근 차단
+ --%>
+<%
+	if(session.getAttribute("user_id") == null){
+		response.sendRedirect("user_login.jsp"); //로그인 페이지로 리다이렉트 처리 
 	}
-</style>
-<body>
-	   <div class="cart-table-area section-padding-100">
-	       <div class="container-fluid">
-	           <div class="row">
-	               <div class="col-12 col-lg-8">
-	                   <div class="checkout_details_area mt-50 clearfix">
-	
-	                       <div class="cart-title">
-	                           <h2 style="border-bottom: 3px solid #fbb710">Mypage</h2>
-	                       </div>
-	
-	                       <table style="width: 100%; height: 100%">
-	                       		<tr>
-	                       			<th>Email</th>
-	                       			<td>email<td>
-	                       		</tr>
-	                       		<tr>
-	                       			<th>Name</th>
-	                       			<td>name<td>
-	                       		</tr>
-	                       		<tr>
-	                       			<th>phone</th>
-	                       			<td>010-1111-1111</td>
-	                       		</tr>
-	                       		<tr>
-	                       			<th>address</th>
-	                       			<td>서울시 마포구 월드컵로</td>
-	                       		</tr>
-	                       		
-	                       </table>
-	                       
-	                   </div>
-	               </div>
-	           </div>
-	       </div>
-	   </div>
-    <!-- ##### Main Content Wrapper End ##### -->
-</body>
-<%@include file="../include/footer.jsp" %>
+
+	//세션으로 넘겨 받은 값 처리 
+	String id = (String)session.getAttribute("user_id");
+	String name = (String)session.getAttribute("user_name");
+%>
+<%@ include file="../include/header.jsp" %>
+	<section>
+		<div align="center">
+			<h2>MyPage</h2>
+			<hr>
+			<%=id %>(<%=name %>)님의 회원정보 관리합니다.
+			<hr>
+			<input type="button" value="비밀번호 변경" class="btn btn-default" 
+			onclick="location.href='pwchange.jsp'">
+			<input type="button" value="회원탈퇴" class="btn btn-info"
+			onclick="location.href='delete.jsp'">
+		</div>
+	</section>
+<%@ include file="../include/footer.jsp" %>

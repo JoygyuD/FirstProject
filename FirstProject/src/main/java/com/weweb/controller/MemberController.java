@@ -1,15 +1,10 @@
 package com.weweb.controller;
 
-import javax.servlet.http.HttpSession;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.weweb.command.MemberVO;
@@ -25,52 +20,23 @@ public class MemberController {
 	
 	@RequestMapping("loginSignup")
 	public String loginSignupPage() {
-		System.out.println("MemberController => loginSignupPage()");
+		System.out.println("MemberController => loginSignupPage() 동작");
 		return "member/loginSignup";
 	}
 	
 	@RequestMapping("signUp")
 	public String signUp(MemberVO vo, RedirectAttributes RA) {
-		System.out.println("MemberController => signUp()");
+		System.out.println("MemberController => signUp() 동작");
 		int result = service.signUp(vo);
 		
-		return "/";
+		return "redirect: home";
 	}
-	
 	@RequestMapping("Login")
-	public String Login(MemberVO vo, RedirectAttributes RA, HttpSession session) {
-		System.out.println("MemberController => Login()");
-		MemberVO loginVO = service.login(vo);
+	public String Login(MemberVO vo, RedirectAttributes RA) {
+		System.out.println("Login => 동작");
+		int result = service.login(vo);
 		
-		if(loginVO == null) {
-			RA.addFlashAttribute("msg", "아이디 또는 패스워드를 잘못입력하셨습니다.");
-			return "redirect:/member/loginSignup";
-		}else {
-			session.setAttribute("user_email", loginVO.getEmail());
-			session.setAttribute("user_name", loginVO.getName());
-		}
-		return "redirect:/";
+		return "redirect : home";
 	}
-	
-	@RequestMapping("logout")
-	public String logout(HttpSession session) {
-		System.out.println("MemberController => logout()");
-		session.invalidate();
-		return "redirect:/";
-	}
-	
-	@RequestMapping("mypage")
-	public String mypage() {
-		return "member/mypage";
-	}
-	@RequestMapping(value="/checkemail",method=RequestMethod.POST)
-	@ResponseBody
-	public int checkId(@RequestParam("id") String id) {
-		System.out.println(id);
-		int result = service.emailCheck(email);
-		
-		return result;
-		
-	}
-	
+
 }
