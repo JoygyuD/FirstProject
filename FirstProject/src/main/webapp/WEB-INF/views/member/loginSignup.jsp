@@ -96,11 +96,13 @@
                             <!-- TABS CONTENT LOGIN -->
                     		<div id="login-tab-content" class="active">
                     			<form class="login-form" action="Login" method="post">
+                    			
                     				<input type="text" class="input" name="email" id="user_login" autocomplete="off" placeholder="Email">
                     				<input type="password" class="input" name="password" id="user_pass" autocomplete="off" placeholder="Password">
                     				<input type="checkbox" class="checkbox" checked id="remember_me">
                     				<label for="remember_me">Remember me</label>
                     				<input type="submit" class="button" value="Login">
+                    				
                     			</form>
                     			<!-- 비밀번호 찾기 기능  -->
                     			<div class="help-action">
@@ -127,7 +129,14 @@
            </div>
        </div>
 <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script  src="${pageContext.request.contextPath}/resources/js/loginSignupscript.js"></script>
-
+  	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script  src="${pageContext.request.contextPath}/resources/js/loginSignupscript.js"></script>
+	<script type="text/javascript">
+			$(document).ready(function(){
+				var msg = '${msg}';
+				if(msg != ''){
+					alert(msg);
+				}
+			});
+		</script>
 </body>
 </html>

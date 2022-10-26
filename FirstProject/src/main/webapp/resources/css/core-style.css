@@ -17,6 +17,13 @@
   src: url("../fonts/helveticaneue_medium-webfont.woff2") format("woff2"), url("../fonts/helveticaneue_medium-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
+@font-face{
+	font-family: 'NanumGothic';
+	src: url("../fonts/NanumGothic.otf") format("otf"), url("../fonts/NanumGothic.ttf") format("ttf");
+	font-weight: normal;
+	font-style: normal;
+	unicode-range: U+AC00-D7A3;
+}
 /* :: 2.0 Import All CSS */
 /* :: 3.0 Base CSS */
 * {
@@ -24,7 +31,7 @@
   padding: 0; }
 
 body {
-  font-family: "helveticaneuemedium";
+  font-family: "helveticaneuemedium", "NanumGothic";
   font-size: 16px; }
 
 h1,
