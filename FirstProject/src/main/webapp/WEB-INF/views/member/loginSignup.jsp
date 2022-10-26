@@ -168,6 +168,6 @@
 			console.log(userId);
 		}
 
-
+		</script>
 </body>
 </html>
