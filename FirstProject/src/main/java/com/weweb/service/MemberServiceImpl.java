@@ -27,5 +27,11 @@ public class MemberServiceImpl implements MemberService{
 		int result = mapper.login(vo);
 		return result;
 	}
-
+	
+	@Override
+	public int emailCheck(String email) {
+		int result = mapper.emailCheck(email);
+		System.out.println("이메일 개수 : "+result);
+		return result;
+	}
 }
