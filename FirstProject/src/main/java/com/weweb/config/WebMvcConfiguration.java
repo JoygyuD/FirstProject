@@ -19,7 +19,8 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		System.out.println("login check Interceptor 동작");
-		registry.addInterceptor(loginInterceptor).addPathPatterns("/member/mypage");
+		registry.addInterceptor(loginInterceptor).addPathPatterns("/member/mypage,"
+				+ "/admin/*, /product/adminprodlist");
 	}
 	
 	

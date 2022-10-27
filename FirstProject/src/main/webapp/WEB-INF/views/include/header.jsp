@@ -72,7 +72,7 @@
             <nav class="amado-nav">
                 <ul>
                     <li class="active"><a href="${pageContext.request.contextPath}">Home</a></li>
-                    <li><a href="${pageContext.request.contextPath}/board/shop">Shop</a></li>
+                    <li><a href="${pageContext.request.contextPath}/product/shop">Shop</a></li>
                 </ul>
             </nav>
             <!-- Button Group

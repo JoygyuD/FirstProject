@@ -27,5 +27,23 @@ public class MemberServiceImpl implements MemberService{
 		MemberVO loginVO = mapper.login(vo);
 		return loginVO;
 	}
+	@Override
+	public int emailCheck(String email) {
+		System.out.println("MemberServiceImpl => emailCheck()");
+		int result = mapper.emailCheck(email);
+		return result;
+	}
+	
+	@Override
+	public int newPassWord(MemberVO vo) {
+		int result = mapper.newPassWord(vo);
+		return result;
+	}
+	
+	@Override
+	public int deleteMember(MemberVO vo) {
+		int result = mapper.deleteMember(vo);
+		return result;
+	}
 
 }

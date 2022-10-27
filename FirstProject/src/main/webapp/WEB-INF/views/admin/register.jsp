@@ -44,9 +44,14 @@
 	
 </head>
 <body>
+	
+
 	<div id="container_box">
-			<h2>상품 등록</h2>
-			
+		<header id="header">
+			<div id="header_box">
+				<h2 style="border-bottom: 3px solid #fbb710">상품 등록</h2>
+			</div>
+		</header>
 				<form role="form" method="post" autocomplete="off">
 				
 				<div class="inputArea">	
@@ -63,22 +68,22 @@
 				
 				<div class="inputArea">
 					<label for="gdsName">상품명</label>
-					<input type="text" id="gdsName" name="gdsName" />
+					<input type="text" id="prodName" name="prodName" />
 				</div>
 				
 				<div class="inputArea">
 					<label for="gdsPrice">상품가격</label>
-					<input type="text" id="gdsPrice" name="gdsPrice" />
+					<input type="text" id="prodPrice" name="prodPrice" />
 				</div>
 				
 				<div class="inputArea">
 					<label for="gdsStock">상품수량</label>
-					<input type="text" id="gdsStock" name="gdsStock" />
+					<input type="text" id="prodStock" name="prodStock" />
 				</div>
 				
 				<div class="inputArea">
 					<label for="gdsDes">상품소개</label>
-					<textarea rows="5" cols="50" id="gdsDes" name="gdsDes"></textarea>
+					<textarea rows="5" cols="50" id="prodDec" name="prodDec"></textarea>
 				</div>
 				
 				<div class="inputArea">

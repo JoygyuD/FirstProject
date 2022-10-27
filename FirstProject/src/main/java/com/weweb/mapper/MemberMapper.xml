@@ -12,6 +12,17 @@
 		select * from tb_member where email = #{email} and password= #{password}
 	</select>
 	
-	 
+	<select id="emailCheck" parameterType="String" resultType="int">
+		select count(*) as result
+		from tb_member
+		where email = #{email}
+	</select>
 	
+	<update id="newPassWord" parameterType="com.weweb.command.MemberVO">
+		UPDATE tb_member SET password = #{password} WHERE email = #{email}
+	</update>
+	
+	<delete id="deleteMember" parameterType="com.weweb.command.MemberVO">
+		delete from tb_member where email = #{email}
+	</delete>
 </mapper>
