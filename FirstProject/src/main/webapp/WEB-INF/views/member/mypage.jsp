@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <head>
 	<meta charset="UTF-8">
 	
@@ -62,7 +63,7 @@
 			<ul>
 				<li><strong>Email:</strong> ${sessionScope.user_email}</li>
 				<li><strong>이름: </strong> ${sessionScope.user_name}</li>
-				<li><strong>생성일자: </strong> ${sessionScope.user_regdate }</li>
+				<li><strong>생성일자: </strong> <fmt:formatNumber value="${sessionScope.user_regdate }" pattern="yyyy-MM-dd"/></li>
 				<li><a href="${pageContext.request.contextPath}/member/memberModify">비밀번호 수정</a></li>
 				<li><a href="${pageContext.request.contextPath}/member/deleteMember" onclick="return confirm('계정을 삭제하시겠습니까?');">계정 삭제</a></li>
 				<li><a href="${pageContext.request.contextPath}">Home</a></li>

@@ -61,7 +61,7 @@
 		<aside>
 			<ul>
 				<li><a href="${pageContext.request.contextPath}/admin/register">상품 등록</a></li>
-				<li><a href="${pageContext.request.contextPath}/product/adminprodlist">상품 목록</a></li>
+				<li><a href="${pageContext.request.contextPath}/admin/adminprodlist">상품 목록</a></li>
 				<li><a href="#">상품 정보</a></li>
 				<li><a href="#">유저 목록</a></li>
 				<li><a href="${pageContext.request.contextPath}">Home</a></li>
