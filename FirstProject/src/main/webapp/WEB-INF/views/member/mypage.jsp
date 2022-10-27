@@ -23,12 +23,12 @@
 		nav#nav { padding:10px; text-align:right; }
 		nav#nav ul li { display:inline-block; margin-left:10px; }
 	 
-	 		section#container { padding:20px 0; border-top:2px solid #eee; border-bottom:2px solid #eee; }
+	 	section#container { padding:20px 0; border-top:2px solid #eee; border-bottom:2px solid #eee; }
 		section#container::after { content:""; display:block; clear:both; }
 		aside { float:left; width:200px; }
 		div#container_box { float:right; width:calc(100% - 200px - 20px); }
 		
-		aside ul li { text-align:center; margin-bottom:10px; }
+		aside ul li { text-align:center; margin-bottom:10px; width: 600px}
 		aside ul li a { display:block; width:100%; padding:10px 0;}
 		aside ul li a:hover { background:#eee; }
 		
@@ -49,7 +49,7 @@
 <div id="root">
 	<header id="header">
 		<div id="header_box">
-			<h2 style="border-bottom: 3px solid #fbb710">AdminPage</h2>
+			<h2 style="border-bottom: 3px solid #fbb710">MyPage</h2>
 		</div>
 	</header>
 	
@@ -63,7 +63,7 @@
 			<ul>
 				<li><strong>Email:</strong> ${sessionScope.user_email}</li>
 				<li><strong>이름: </strong> ${sessionScope.user_name}</li>
-				<li><strong>생성일자: </strong> <fmt:formatNumber value="${sessionScope.user_regdate }" pattern="yyyy-MM-dd"/></li>
+				<li><strong>생성일자: </strong> <fmt:formatDate value="${sessionScope.user_regdate }" pattern="yyyy-MM-dd"/></li>
 				<li><a href="${pageContext.request.contextPath}/member/memberModify">비밀번호 수정</a></li>
 				<li><a href="${pageContext.request.contextPath}/member/deleteMember" onclick="return confirm('계정을 삭제하시겠습니까?');">계정 삭제</a></li>
 				<li><a href="${pageContext.request.contextPath}">Home</a></li>
