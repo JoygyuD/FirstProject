@@ -1,5 +1,10 @@
 package com.weweb.service;
 
-public interface ProductService {
+import java.util.ArrayList;
 
+import com.weweb.command.ProductVO;
+
+public interface ProductService {
+	
+	public ArrayList<ProductVO> productList();
 }

@@ -22,11 +22,9 @@ public class ProductVO {
 	
 	@Override
 	public String toString() {
-		String msg = String.format("[상품번호: %s, 상품명: %s, 카테고리번호: %s, "
-				+ "상품가격: %s, 상품재고량: %s, 상품설명: %s, 상품이미지: %s, 상품등록일: %s, 브랜드: %s", 
-				this.prodNum, this.prodName, this.cateCode, this.prodPrice, 
-				this.prodStock, this.prodDec, this.prodImg, this.prodDate);
-		return msg;
+		
+		return "[상품번호: "+this.prodNum+", 상품명: "+this.prodName+", 카테고리번호: "+this.cateCode+", 상품가격: "
+		+this.prodPrice+", 상품재고량: "+this.prodStock+", 상품설명: "+this.prodDec+", 상품이미지: "+this.prodImg+", 상품등록일: "+this.prodDate+"]";
 	}
 
 }

@@ -5,4 +5,8 @@
 
 <mapper namespace="com.weweb.mapper.ProductMapper">
 	
+	<select id="productList" parameterType="com.weweb.command.ProductVO" resultType="com.weweb.command.ProductVO">
+		select * from tb_product
+	</select>
+	
 </mapper>
