@@ -95,7 +95,7 @@
                 <div class="row">
 
                     <!-- Single Product Area -->
-                <c:forEach items="#{list} }" var="list">
+                <c:forEach items="${list}" var="list">
                     <div class="col-12 col-sm-6 col-md-12 col-xl-6">
                         <div class="single-product-wrapper">
                             <!-- Product Image -->
@@ -110,9 +110,9 @@
                                 <!-- Product Meta Data -->
                                 <div class="product-meta-data">
                                     <div class="line"></div>
-                                    <p class="product-price">$180</p>
+                                    <p class="product-price">${list.prodPrice }원</p>
                                     <a href="product-details.html">
-                                        <h6>Modern Chair</h6>
+                                        <h6>${list.prodName }</h6>
                                     </a>
                                 </div>
                                 <!-- Ratings & Cart -->

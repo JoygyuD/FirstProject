@@ -44,7 +44,7 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="#">Checkout</a>
                                         </li>
-                                    </ul>
+                                    </ul> 
                                 </div>
                             </nav>
                         </div>
