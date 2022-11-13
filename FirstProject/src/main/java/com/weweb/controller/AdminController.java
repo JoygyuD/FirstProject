@@ -49,6 +49,6 @@ public class AdminController {
 		System.out.println("ProductController => adminProdlist()");
 		ArrayList<ProductVO> list = service.adminProdList(vo);
 		model.addAttribute("list", list); 
-		return "product/adminprodlist";
+		return "admin/adminprodlist";
 	}
 }

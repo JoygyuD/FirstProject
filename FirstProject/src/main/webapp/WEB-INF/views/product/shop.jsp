@@ -2,6 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
         <div class="shop_sidebar_area">
 
             <!-- ##### Single Widget ##### -->
@@ -95,7 +96,11 @@
                 <div class="row">
 
                     <!-- Single Product Area -->
+<<<<<<< HEAD
                 <c:forEach items="${list}" var="list">
+=======
+                <c:forEach items="${list}" var="vo">
+>>>>>>> refs/remotes/origin/Feature/GyuDeok
                     <div class="col-12 col-sm-6 col-md-12 col-xl-6">
                         <div class="single-product-wrapper">
                             <!-- Product Image -->
@@ -110,16 +115,25 @@
                                 <!-- Product Meta Data -->
                                 <div class="product-meta-data">
                                     <div class="line"></div>
+<<<<<<< HEAD
                                     <p class="product-price">${list.prodPrice }원</p>
+=======
+                                    <p class="product-price">₩<fmt:formatNumber value="${vo.prodPrice }" pattern="###,###,###"/></p>
+>>>>>>> refs/remotes/origin/Feature/GyuDeok
                                     <a href="product-details.html">
+<<<<<<< HEAD
                                         <h6>${list.prodName }</h6>
+=======
+                                        <h6>${vo.prodName }</h6>
+>>>>>>> refs/remotes/origin/Feature/GyuDeok
                                     </a>
                                 </div>
                                 <!-- Ratings & Cart -->
                                 <div class="ratings-cart text-right">
                                     
                                     <div class="cart">
-                                        <a href="cart.html" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/cart.png" alt=""></a>
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="left" title="Add to Cart">
+                                        <img src="${pageContext.request.contextPath}/resources/img/core-img/cart.png" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -132,10 +146,10 @@
                         <!-- Pagination -->
                         <nav aria-label="navigation">
                             <ul class="pagination justify-content-end mt-50">
-                                <li class="page-item active"><a class="page-link" href="#">01.</a></li>
-                                <li class="page-item"><a class="page-link" href="#">02.</a></li>
-                                <li class="page-item"><a class="page-link" href="#">03.</a></li>
-                                <li class="page-item"><a class="page-link" href="#">04.</a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
                             </ul>
                         </nav>
                     </div>
